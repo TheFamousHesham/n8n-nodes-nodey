@@ -1,0 +1,58 @@
+{
+  "name": "n8n-nodes-nodey",
+  "version": "0.1.1",
+  "description": "n8n community node that fires a workflow when an NFC tag is scanned via the Nodey mobile app (iOS + Android). Accepts payloads from both platforms and normalizes them into a single shape. Verified-compatible.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "trigger",
+    "nfc",
+    "webhook",
+    "nodey",
+    "mobile",
+    "automation",
+    "ios",
+    "android"
+  ],
+  "homepage": "https://github.com/TheFamousHesham/n8n-nodes-nodey",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheFamousHesham/n8n-nodes-nodey.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheFamousHesham/n8n-nodes-nodey/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Hesham",
+    "email": "hesham@betterbrainlab.org"
+  },
+  "scripts": {
+    "build": "n8n-node build",
+    "build:watch": "tsc --watch",
+    "dev": "n8n-node dev",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "release": "n8n-node release",
+    "prepublishOnly": "n8n-node prerelease"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "nodes": [
+      "dist/nodes/NodeyNfcTrigger/NodeyNfcTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "*",
+    "eslint": "9.39.4",
+    "prettier": "3.8.3",
+    "typescript": "5.9.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
