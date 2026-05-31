@@ -12,6 +12,7 @@ import {
 	INodeTypeDescription,
 	IWebhookFunctions,
 	IWebhookResponseData,
+	NodeConnectionTypes,
 } from 'n8n-workflow';
 
 import { normalize } from './normalize-payload';
@@ -55,7 +56,7 @@ export class NodeyNfcTrigger implements INodeType {
 		description: 'Fires when an NFC tag is scanned via the Nodey mobile app',
 		defaults: { name: 'Nodey NFC Trigger' },
 		inputs: [],
-		outputs: ['main'],
+		outputs: [NodeConnectionTypes.Main],
 		usableAsTool: true,
 		webhooks: [
 			{
