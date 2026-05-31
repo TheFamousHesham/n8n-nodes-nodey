@@ -46,3 +46,4 @@ jobs:
         run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          RELEASE_MODE: '1'   # Allow @n8n/node-cli prerelease hook to pass
