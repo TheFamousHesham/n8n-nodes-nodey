@@ -63,7 +63,7 @@ export class NodeyNfcTrigger implements INodeType {
 				name: 'default',
 				httpMethod: 'POST',
 				responseMode: 'onReceived',
-				path: 'nodey-nfc',
+				path: '={{$parameter["path"]}}',
 			},
 		],
 		properties: [
@@ -73,6 +73,16 @@ export class NodeyNfcTrigger implements INodeType {
 				name: 'nodeyPromoNotice',
 				type: 'notice',
 				default: '',
+			},
+			{
+				displayName: 'Path',
+				name: 'path',
+				type: 'string',
+				default: 'nodey-nfc',
+				required: true,
+				placeholder: 'nodey-nfc',
+				description:
+					'The URL path segment for this webhook. The Production URL shown above is built from this value. Use any string you want — alphanumerics, dashes, and slashes are allowed',
 			},
 			{
 				displayName: 'Output Format',

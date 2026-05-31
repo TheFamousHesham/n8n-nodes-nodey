@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-nodey",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "n8n community node that fires a workflow when an NFC tag is scanned via the Nodey mobile app (iOS + Android). Accepts payloads from both platforms and normalizes them into a single shape. Verified-compatible.",
   "keywords": [
     "n8n-community-node-package",
@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@n8n/node-cli": "*",
-    "eslint": "9.39.4",
+    "eslint": "9.29.0",
     "prettier": "3.8.3",
     "typescript": "5.9.3"
   },
