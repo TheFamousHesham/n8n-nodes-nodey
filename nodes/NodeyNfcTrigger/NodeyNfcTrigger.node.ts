@@ -63,6 +63,7 @@ export class NodeyNfcTrigger implements INodeType {
 				name: 'default',
 				httpMethod: 'POST',
 				responseMode: 'onReceived',
+				isFullPath: true,
 				path: '={{$parameter["path"]}}',
 			},
 		],
